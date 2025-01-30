@@ -1,0 +1,452 @@
+<div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img1.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img2.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img3.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img4.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img5.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img6.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img7.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-6">
+          <img
+            src="../../assets/carousel/car-img8.avif"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#multiItemCarousel"
+    role="button"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#multiItemCarousel"
+    role="button"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="accordion sticky-top" id="filterAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFilters">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFilters"
+              aria-expanded="true"
+              aria-controls="collapseFilters"
+            >
+              Filters
+            </button>
+          </h2>
+          <div
+            id="collapseFilters"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingFilters"
+            data-bs-parent="#filterAccordion"
+          >
+            <div class="accordion-body">
+              <div class="accordion" id="innerFilterAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingLanguages">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseLanguages"
+                      aria-expanded="false"
+                      aria-controls="collapseLanguages"
+                    >
+                      Languages
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseLanguages"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingLanguages"
+                    data-bs-parent="#innerFilterAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="mb-3">
+                        <label class="form-label">Languages</label>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="Tamil"
+                            id="languageTamil"
+                            (change)="
+                              onLanguageChange('Tamil', $event.target.checked)
+                            "
+                          />
+                          <label class="form-check-label" for="languageTamil"
+                            >Tamil</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="English"
+                            id="languageEnglish"
+                            (change)="
+                              onLanguageChange('English', $event.target.checked)
+                            "
+                          />
+                          <label class="form-check-label" for="languageEnglish"
+                            >English</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="Malayalam"
+                            id="languageMalayalam"
+                            (change)="
+                              onLanguageChange(
+                                'Malayalam',
+                                $event.target.checked
+                              )
+                            "
+                          />
+                          <label
+                            class="form-check-label"
+                            for="languageMalayalam"
+                            >Malayalam</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="Hindi"
+                            id="languageHindi"
+                            (change)="
+                              onLanguageChange('Hindi', $event.target.checked)
+                            "
+                          />
+                          <label class="form-check-label" for="languageHindi"
+                            >Hindi</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingGenres">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseGenres"
+                      aria-expanded="false"
+                      aria-controls="collapseGenres"
+                    >
+                      Genres
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseGenres"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingGenres"
+                    data-bs-parent="#innerFilterAccordion"
+                  >
+                    <div class="accordion-body">
+                      <label class="form-label">Genres</label>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Action"
+                          id="genreAction"
+                          (change)="
+                            onGenreChange('Action', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreAction"
+                          >Action</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Sci-Fi"
+                          id="genreSciFi"
+                          (change)="
+                            onGenreChange('Sci-Fi', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreSciFi"
+                          >Sci-Fi</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Drama"
+                          id="genreDrama"
+                          (change)="
+                            onGenreChange('Drama', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreDrama"
+                          >Drama</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Romance"
+                          id="genreRomance"
+                          (change)="
+                            onGenreChange('Romance', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreRomance"
+                          >Romance</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Comedy"
+                          id="genreComedy"
+                          (change)="
+                            onGenreChange('Comedy', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreComedy"
+                          >Comedy</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Thriller"
+                          id="genreThriller"
+                          (change)="
+                            onGenreChange('Thriller', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreThriller"
+                          >Thriller</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Crime"
+                          id="genreCrime"
+                          (change)="
+                            onGenreChange('Crime', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreCrime"
+                          >Crime</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Animation"
+                          id="genreAnimation"
+                          (change)="
+                            onGenreChange('Animation', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreAnimation"
+                          >Animation</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="Fantasy"
+                          id="genreFantasy"
+                          (change)="
+                            onGenreChange('Fantasy', $event.target.checked)
+                          "
+                        />
+                        <label class="form-check-label" for="genreFantasy"
+                          >Fantasy</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row mt-3" *ngIf="filteredMovies.length">
+        <div class="col-md-4 mb-4" *ngFor="let movie of filteredMovies">
+          <div role="button" class="card h-100" (click)="onCardClick(movie)">
+            <img
+              [src]="movie.posterUrl"
+              class="card-img-top"
+              alt="{{ movie.title }}"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <p class="card-text d-flex justify-content-between">
+                {{ movie.genre
+                }}<span class="text-muted fs-6">{{ movie.rating }}</span>
+              </p>
+            </div>
+            <div class="card-footer justify-content-between d-flex">
+              <small class="text-muted">{{ movie.runtime }}</small>
+              <small class="text-muted">{{ movie.language }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!filteredMovies.length" class="text-center">
+        <p>No movies available.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3>Upcoming Movies</h3>
+      <div
+        id="upcomingMoviesCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div
+            *ngFor="let movie of upcomingMovies; let i = index"
+            class="carousel-item"
+            [ngClass]="{ active: i === 0 }"
+          >
+            <div class="row">
+              <div class="col-md-3 mb-4" *ngFor="let movie of upcomingMovies">
+                <div class="card h-100" (click)="onCardClick(movie)">
+                  <img
+                    [src]="movie.posterUrl"
+                    class="w-100 h-100"
+                    alt="{{ movie.title }}"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text d-flex justify-content-between">
+                      {{ movie.genre
+                      }}<span class="text-muted fs-6">{{ movie.rating }}</span>
+                    </p>
+                  </div>
+                  <div class="card-footer d-flex justify-content-between">
+                    <small class="text-muted">Release: {{ movie.year }}</small>
+                    <small class="text-muted">{{ movie.language }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#upcomingMoviesCarousel"
+          role="button"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#upcomingMoviesCarousel"
+          role="button"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

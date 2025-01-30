@@ -1,0 +1,40 @@
+.card{
+    height: auto;
+}
+  .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1.1rem;
+  }
+  
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+.imgclass{
+    height: auto;
+    width: auto;
+    object-fit:cover;
+    padding: 30px;
+}
+
+.back{
+    background-color:rgb(241, 242, 243);
+}
+
+
+.imgclass {
+    width: 100%;
+    height: auto;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  

@@ -1,0 +1,24 @@
+.container {
+    margin-top: 20px;
+  }
+  .card-img-top {
+    height: 100%;  
+    object-fit:cover;
+    width: 100%;
+  }
+  
+  .sticky-top {
+    position: sticky;
+    top: 20px;
+  }
+
+
+  .carousel-item img {
+    max-height: 300px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the images cover the container without distortion */
+    width: fit-content;
+}
+.car-img{
+  height: 100%;
+  object-fit: cover;
+}

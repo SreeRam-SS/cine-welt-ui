@@ -1,0 +1,62 @@
+<div *ngIf="movie" class="card shadow-lg px-3 pt-5 back h-100">
+  <div class="row g-0 h-100">
+    <div class="col-md-4 position-relative">
+      <img
+        [src]="movie.posterUrl"
+        class="img-fluid rounded "
+        alt="{{ movie.title }}"
+      />
+      <span
+        *ngIf="isUpcomingMovie(movie)"
+        class="badge bg-warning position-absolute top-0 start-0 m-3"
+        >Upcoming</span
+      >
+    </div>
+    <div class="col-md-8 mt-3 px-3 d-flex flex-column">
+      <div class="card-body flex-grow-1">
+        <h2 class="card-title text-dark">{{ movie.title }}</h2>
+        <p class="card-text text-muted">{{ movie.description }}</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Genre:</strong> {{ movie.genre }}
+          </li>
+          <li class="list-group-item">
+            <strong>Runtime:</strong> {{ movie.runtime }}
+          </li>
+          <li class="list-group-item">
+            <strong>Language:</strong> {{ movie.language }}
+          </li>
+          <li class="list-group-item">
+            <strong>Director:</strong> {{ movie.director }}
+          </li>
+          <li class="list-group-item">
+            <strong>Year:</strong> {{ movie.year }}
+          </li>
+          <li class="list-group-item">
+            <strong>Rating:</strong> {{ movie.rating }}
+          </li>
+        </ul>
+        <div *ngIf="!isUpcomingMovie(movie)" class="mt-auto">
+          <button class="btn btn-dark" (click)="bookNow()">Book Now</button>
+        </div>
+        <div *ngIf="isUpcomingMovie(movie)" class="mt-auto ">
+          <button class="btn btn-primary shadow-lg">Upcoming</button>
+        </div>
+      </div>
+      <div class="px-3">
+        <h3 class="text-dark">Available Theaters and Showtimes</h3>
+        <div *ngFor="let theater of movie.theaters" class="mb-3">
+          <h4>{{ theater.name }}</h4>
+          <ul class="list-unstyled">
+            <button
+              class="btn btn-outline-success mx-3"
+              *ngFor="let showtime of theater.showtimes"
+            >
+              {{ showtime }}
+            </button>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

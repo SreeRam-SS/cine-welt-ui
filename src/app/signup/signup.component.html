@@ -1,0 +1,56 @@
+<div *ngIf="currentpage!=='login'" class="bg-image"></div>
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="container content-container" style="max-width: 420px">
+    <h2 class="text-white text-center mt-2">Sign Up</h2>
+    
+    <!-- <form (ngSubmit)="submit()"> > -->
+      <div class="form-floating mt-5 mb-3">
+        <input
+        [(ngModel)]="register.name"
+          type="text"
+          class="form-control"
+          id="floatingName"
+          placeholder="Your Name"
+        />
+        <label for="floatingName">Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        [(ngModel)]="register.email"
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        [(ngModel)]="register.password"
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        [(ngModel)]="register.confirmPassword"
+          type="password"
+          class="form-control"
+          id="floatingConfirmPassword"
+          placeholder="Confirm Password"
+        />
+        <label for="floatingConfirmPassword">Confirm Password</label>
+      </div>
+      <br />
+      <div class="d-flex justify-content-between mt-4">
+        <button (click)="submit()" type="submit" class="btn btn-primary btn-sm">Sign Up</button>
+        <p class="text-white m-2">
+          Already have an account? <a [routerLink]="['/login']" class="text-white">Login</a>
+        </p>
+      </div>
+    <!-- </form> -->
+  </div>
+</div>
